@@ -5,8 +5,12 @@ runtime: quarkus
 registry: ""
 image: ""
 imageDigest: ""
-build: local
-git: {}
+build: git
+git:
+  url: https://github.com/csantanapr/func-on-cluster.git   # required, git repository with the function source code
+  revision: main                                    # optional, git revision to be used (branch, tag, commit)
+  # contextDir: myfunction                          # optional, needed only if the function is not located
+                                                    # in the repository root folder
 builder: quay.io/boson/faas-jvm-builder:v0.9.2
 builders:
   default: quay.io/boson/faas-jvm-builder:v0.9.2
