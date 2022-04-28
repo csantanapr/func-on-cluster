@@ -1,0 +1,27 @@
+version: 0.0.0
+name: func-on-cluster
+namespace: ""
+runtime: quarkus
+registry: ""
+image: ""
+imageDigest: ""
+build: local
+git: {}
+builder: quay.io/boson/faas-jvm-builder:v0.9.2
+builders:
+  default: quay.io/boson/faas-jvm-builder:v0.9.2
+  jvm: quay.io/boson/faas-jvm-builder:v0.9.2
+  native: quay.io/boson/faas-quarkus-native-builder:v0.9.2
+buildpacks: []
+volumes: []
+buildEnvs: []
+envs: []
+annotations: {}
+options: {}
+labels: []
+healthEndpoints:
+  liveness: /health/liveness
+  readiness: /health/readiness
+created: 2022-04-28T00:07:04.153282-04:00
+invocation:
+  format: http
